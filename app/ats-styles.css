@@ -170,7 +170,7 @@ body {
 ========================= */
 .navbar {
   background-color: #ffffff;
-  padding: 12px 0;
+  padding: 20px 0;
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: sticky;
@@ -184,13 +184,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 40px;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .navbar .logo img {
-  height: 40px;
+  height: 50px;
   vertical-align: middle;
 }
 
@@ -199,7 +199,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 30px;
+  gap: 40px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -208,14 +208,10 @@ body {
 .nav-links ul li a {
   color: #bb1919;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 1.2em;
   transition: color 0.3s ease;
   font-weight: bold;
   white-space: nowrap;
-}
-
-.nav-links ul li a:hover {
-  color: #007bff;
 }
 
 /* =========================
@@ -224,7 +220,7 @@ body {
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 20px 0;
+  padding: 30px 0;
   text-align: center;
   width: 100%;
   margin-top: auto;
@@ -234,34 +230,30 @@ body {
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   align-items: center;
 }
 
 .footer-content p {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 1.1em;
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
 }
 
 .footer-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 1em;
   transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #007bff;
 }
 
 /* =========================
@@ -423,7 +415,7 @@ body {
   display: none;
   background: none;
   border: none;
-  font-size: 28px;
+  font-size: 32px;
   cursor: pointer;
   color: #bb1919;
 }
