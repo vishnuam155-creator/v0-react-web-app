@@ -9,6 +9,7 @@ import ResultSection from "@/components/ResultSection"
 import LoginWarningPopup from "@/components/LoginWarningPopup"
 import LimitPopup from "@/components/LimitPopup"
 import { useAuth } from "@/hooks/useAuth"
+import { getClientHeaders, getClientFormHeaders } from "@/lib/config"
 
 export default function HomePage() {
   const [mode, setMode] = useState("with_jd")
@@ -57,9 +58,9 @@ export default function HomePage() {
 
     // Check usage first
     try {
-      const usageRes = await fetch("http://127.0.0.1:8000/resume_checker/", {
+      const usageRes = await fetch("/api/resume-checker", {
         method: "GET",
-        headers: authToken ? { Authorization: `Token ${authToken}` } : {},
+        headers: getClientHeaders(authToken),
         credentials: "include",
       })
       const usageData = await usageRes.json()
@@ -97,9 +98,9 @@ export default function HomePage() {
       setResponse("")
       setShowResponse(true)
 
-      const res = await fetch("http://127.0.0.1:8000/resume_checker/", {
+      const res = await fetch("/api/resume-checker", {
         method: "POST",
-        headers: authToken ? { Authorization: `Token ${authToken}` } : {},
+        headers: getClientFormHeaders(authToken),
         body: formData,
         credentials: "include",
       })

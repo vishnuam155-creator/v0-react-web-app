@@ -1,9 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Inter } from "next/font/google"
 import { Suspense } from "react"
 import "./globals.css"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "QuotientOne-ATS",
@@ -21,7 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/x-icon" href="/image/logo_rm.jpg" />
       </head>
-      <body className={`font-mono ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={inter.className}>
         <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>
       </body>
     </html>

@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { getClientHeaders } from "@/lib/config"
 
 export function useAuth() {
   const [authToken, setAuthToken] = useState<string | null>(null)
@@ -23,9 +24,9 @@ export function useAuth() {
 
   const fetchUserPlan = async (username: string, token: string) => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/get-user-plan/", {
+      const res = await fetch("/api/user-plan", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: getClientHeaders(token),
         body: JSON.stringify({ username }),
       })
       const data = await res.json()
