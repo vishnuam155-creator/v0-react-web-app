@@ -170,7 +170,7 @@ body {
 ========================= */
 .navbar {
   background-color: #ffffff;
-  padding: 20px 0;
+  padding: 12px 0; /* reduced padding for more compact navbar */
   width: 100%;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   position: sticky;
@@ -184,13 +184,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 40px;
+  padding: 0 20px; /* reduced horizontal padding for more compact layout */
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .navbar .logo img {
-  height: 50px;
+  height: 40px; /* slightly reduced logo size for compact design */
   vertical-align: middle;
 }
 
@@ -199,7 +199,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 40px;
+  gap: 25px; /* reduced gap between nav items for compact layout */
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -208,7 +208,7 @@ body {
 .nav-links ul li a {
   color: #bb1919;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.1em; /* slightly reduced font size for compact design */
   transition: color 0.3s ease;
   font-weight: bold;
   white-space: nowrap;
@@ -220,7 +220,7 @@ body {
 .footer {
   background-color: #333;
   color: #fff;
-  padding: 30px 0;
+  padding: 20px 0; /* reduced padding for more compact footer */
   text-align: center;
   width: 100%;
   margin-top: auto;
@@ -230,29 +230,29 @@ body {
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 20px; /* reduced horizontal padding for compact layout */
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px; /* reduced gap between footer elements */
   align-items: center;
 }
 
 .footer-content p {
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1em; /* slightly reduced font size for compact design */
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 15px; /* reduced gap between footer links */
   justify-content: center;
 }
 
 .footer-links a {
   color: #fff;
   text-decoration: none;
-  font-size: 1em;
+  font-size: 0.95em; /* slightly reduced font size for compact design */
   transition: color 0.3s ease;
 }
 
@@ -268,8 +268,8 @@ body {
 
   .nav-links ul {
     flex-direction: column;
-    gap: 12px;
-    padding-top: 10px;
+    gap: 8px; /* reduced mobile gap for compact design */
+    padding-top: 8px;
   }
 
   .footer-content {
@@ -278,7 +278,7 @@ body {
 
   .footer-links {
     flex-direction: column;
-    gap: 8px;
+    gap: 6px; /* reduced mobile gap for compact design */
   }
 }
 
@@ -379,7 +379,8 @@ body {
   .nav-links ul {
     flex-direction: column;
     gap: 12px;
-    padding-top: 10px;
+    text-align: center;
+    padding: 10px 0;
   }
 }
 
@@ -415,7 +416,7 @@ body {
   display: none;
   background: none;
   border: none;
-  font-size: 32px;
+  font-size: 28px; /* slightly reduced toggle button size for compact design */
   cursor: pointer;
   color: #bb1919;
 }
@@ -437,7 +438,7 @@ body {
 
   .nav-links ul {
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     text-align: center;
     padding: 10px 0;
   }

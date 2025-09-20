@@ -56,7 +56,6 @@ export default function HomePage() {
       return
     }
 
-    // Check usage first
     try {
       const usageRes = await fetch("/api/resume-checker", {
         method: "GET",
@@ -70,17 +69,24 @@ export default function HomePage() {
         return
       }
 
+      // Check limits based on authentication status
       if (!authToken) {
+        // Non-login users: Check free limit (typically 1-3 uploads)
         if (usageData.uploads_used >= usageData.limit) {
           setShowLoginWarning(true)
           return
         }
       } else {
+        // Login users: Check plan-based limit (higher limit based on subscription)
         if (usageData.uploads_used >= usageData.limit) {
           setShowLimitPopup(true)
           return
         }
       }
+
+      console.log("[v0] User auth status:", !!authToken)
+      console.log("[v0] Usage data:", usageData)
+      console.log("[v0] Uploads used:", usageData.uploads_used, "Limit:", usageData.limit)
 
       // Submit form
       const formData = new FormData()
